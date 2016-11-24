@@ -19,8 +19,6 @@ void * const kNonSelectedAllBGKey = (void * const) &kNonSelectedAllBGKey;
 @interface PXAlertView ()
 
 @property (nonatomic) UIView *backgroundView;
-@property (nonatomic) UIView *alertView;
-@property (nonatomic) UILabel *titleLabel;
 @property (nonatomic) UILabel *messageLabel;
 @property (nonatomic) UIButton *cancelButton;
 @property (nonatomic) UIButton *otherButton;
@@ -48,7 +46,7 @@ void * const kNonSelectedAllBGKey = (void * const) &kNonSelectedAllBGKey;
 
 - (void)setCenter:(CGPoint)center
 {
-	self.alertView.center = center;
+    self.alertView.center = center;
 }
 
 - (void)setWindowTintColor:(UIColor *)color
@@ -210,4 +208,13 @@ void * const kNonSelectedAllBGKey = (void * const) &kNonSelectedAllBGKey;
     [self.otherButton setTitleColor:color forState:UIControlStateNormal];
     [self.otherButton setTitleColor:color forState:UIControlStateHighlighted];
 }
+
+
+- (void)setAllButtonsFont:(UIFont *)font
+{
+    for (UIButton *button in self.buttons) {
+        button.titleLabel.font = font;
+    }
+}
+
 @end

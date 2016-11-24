@@ -31,6 +31,8 @@
 - (void)setAllButtonsTextColor:(UIColor *)color;
 - (void)setOtherButtonTextColor:(UIColor *)color;
 
+- (void)setAllButtonsFont:(UIFont *)font;
+
 - (void)useDefaultIOS7Style;
 
 - (void)setCornerRadius:(CGFloat)radius;

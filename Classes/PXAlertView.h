@@ -13,6 +13,17 @@ typedef void(^PXAlertViewCompletionBlock)(BOOL cancelled, NSInteger buttonIndex)
 @interface PXAlertView : UIViewController
 
 @property (nonatomic, getter = isVisible) BOOL visible;
+@property (nonatomic) UILabel *titleLabel;
+@property (nonatomic) UIView *alertView;
+
+
+- (id)initWithTitle:(NSString *)title
+            message:(NSString *)message
+        cancelTitle:(NSString *)cancelTitle
+        otherTitles:(NSArray *)otherTitles
+ buttonsShouldStack:(BOOL)shouldstack
+        contentView:(UIView *)contentView
+         completion:(PXAlertViewCompletionBlock)completion;
 
 + (instancetype)showAlertWithTitle:(NSString *)title;
 
@@ -87,7 +98,7 @@ typedef void(^PXAlertViewCompletionBlock)(BOOL cancelled, NSInteger buttonIndex)
  * Dismisses the receiver
  */
 - (void)dismiss;
-
+- (void)dismiss:(id)sender;
 /**
  * Dismisses the receiver, optionally with animation.
  */
@@ -98,5 +109,17 @@ typedef void(^PXAlertViewCompletionBlock)(BOOL cancelled, NSInteger buttonIndex)
  * This method enables or disables this feature.
  */
 - (void)setTapToDismissEnabled:(BOOL)enabled;
+
+
+- (id)initWithTitle:(NSString *)title
+            message:(NSString *)message
+        cancelTitle:(NSString *)cancelTitle
+         otherTitle:(NSString *)otherTitle
+ buttonsShouldStack:(BOOL)shouldstack
+        contentView:(UIView *)contentView
+         completion:(PXAlertViewCompletionBlock)completion;
+
+- (void)show;
+
 
 @end
