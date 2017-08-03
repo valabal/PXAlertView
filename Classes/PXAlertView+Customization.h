@@ -39,5 +39,6 @@
 - (void)setCenter:(CGPoint)center;
 
 - (void)setCustomBackgroundColorForButton:(id)sender;
+- (void)setNonSelectedCustomBackgroundColorForButton:(id)sender;
 
 @end
