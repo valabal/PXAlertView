@@ -15,6 +15,9 @@ typedef void(^PXAlertViewCompletionBlock)(BOOL cancelled, NSInteger buttonIndex)
 @property (nonatomic, getter = isVisible) BOOL visible;
 @property (nonatomic) UILabel *titleLabel;
 @property (nonatomic) UIView *alertView;
+@property (nonatomic) UIButton *cancelButton;
+@property (nonatomic) UIButton *otherButton;
+@property (nonatomic) NSArray *buttons;
 
 
 - (id)initWithTitle:(NSString *)title
