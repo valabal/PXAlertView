@@ -20,9 +20,7 @@ void * const kNonSelectedAllBGKey = (void * const) &kNonSelectedAllBGKey;
 
 @property (nonatomic) UIView *backgroundView;
 @property (nonatomic) UILabel *messageLabel;
-@property (nonatomic) UIButton *cancelButton;
-@property (nonatomic) UIButton *otherButton;
-@property (nonatomic) NSArray *buttons;
+
 
 @end
 
